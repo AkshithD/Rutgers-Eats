@@ -10,14 +10,25 @@ import SwiftUI
 
 class ViewController: UIViewController {
 
+    
+    
+    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
        
-      
+    
         
      
                    
         }
+    
+    @IBAction func BtnURL(_ sender: UIButton) {
+        UIApplication.shared.open(URL(string: "http://food.rutgers.edu/places-to-eat/")! as URL,
+            options: [:],
+        completionHandler: nil)
+    }
+    
         }
             
     

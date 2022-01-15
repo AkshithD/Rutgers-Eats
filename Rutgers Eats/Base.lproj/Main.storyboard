@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Rutgers Eats-->
+        <!--Front page-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="originalvc" id="BYZ-38-t0r" customClass="ViewController" customModule="Rutgers_Eats" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="originalvc" title="Front page" id="BYZ-38-t0r" customClass="ViewController" customModule="Rutgers_Eats" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -19,7 +19,6 @@
                             <button opaque="NO" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gw8-HF-p9B">
                                 <rect key="frame" x="15" y="61" width="384" height="38"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="Gw8-HF-p9B" secondAttribute="height" multiplier="187:19" id="1va-Yf-l56"/>
                                     <constraint firstAttribute="width" secondItem="Gw8-HF-p9B" secondAttribute="height" multiplier="374:37" id="KOe-VE-46g"/>
                                     <constraint firstAttribute="height" constant="38" id="aq5-UN-jCw"/>
                                     <constraint firstAttribute="width" constant="374" id="lMp-26-daN"/>
@@ -32,13 +31,54 @@
                                     <segue destination="SZZ-1C-Tgj" kind="show" id="FVw-ib-DSv"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="BtnURL" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rPR-YQ-drO">
+                                <rect key="frame" x="15" y="119" width="384" height="38"/>
+                                <accessibility key="accessibilityConfiguration" identifier="BtnURL" label="BtnURL">
+                                    <accessibilityTraits key="traits" link="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="XGQ-c6-Ado"/>
+                                    <constraint firstAttribute="width" secondItem="rPR-YQ-drO" secondAttribute="height" multiplier="374:37" id="ZHa-eA-yJd"/>
+                                    <constraint firstAttribute="height" constant="38" id="han-Td-EVL"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Dining hall information">
+                                    <color key="baseForegroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="BtnURL:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BMS-kC-qzp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q6u-O5-HCm">
+                                <rect key="frame" x="15" y="177" width="384" height="38"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" link="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="Qw8-0M-5ua"/>
+                                    <constraint firstAttribute="width" constant="374" id="nLP-Jc-LV7"/>
+                                    <constraint firstAttribute="width" secondItem="Q6u-O5-HCm" secondAttribute="height" multiplier="374:37" id="wip-kR-K5G"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Search by Location">
+                                    <color key="baseForegroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="ZtF-C6-JuO" kind="show" id="6he-xU-vAu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Xb0-fU-KP0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Gw8-HF-p9B" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qlf-dt-ZSa"/>
+                            <constraint firstItem="Q6u-O5-HCm" firstAttribute="width" secondItem="Q6u-O5-HCm" secondAttribute="height" multiplier="374:37" id="RQm-BW-GX1"/>
                             <constraint firstItem="Gw8-HF-p9B" firstAttribute="top" secondItem="Xb0-fU-KP0" secondAttribute="top" constant="61" id="Rm4-oH-fpx"/>
+                            <constraint firstItem="rPR-YQ-drO" firstAttribute="top" secondItem="Gw8-HF-p9B" secondAttribute="bottom" constant="20" id="S7b-bu-99c"/>
+                            <constraint firstItem="rPR-YQ-drO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UWn-gb-Gkh"/>
                             <constraint firstItem="Gw8-HF-p9B" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aHz-Vm-hgT"/>
                             <constraint firstItem="Gw8-HF-p9B" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lt5-AP-7Wv"/>
+                            <constraint firstItem="Q6u-O5-HCm" firstAttribute="top" secondItem="rPR-YQ-drO" secondAttribute="bottom" constant="20" id="xGA-bu-pdk"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -51,57 +91,14 @@
             </objects>
             <point key="canvasLocation" x="760.86956521739137" y="97.767857142857139"/>
         </scene>
-        <!--Rutgers Eats-->
+        <!--Campus selection-->
         <scene sceneID="5ig-kQ-iF1">
             <objects>
-                <viewController id="SZZ-1C-Tgj" customClass="SecondView" customModule="Rutgers_Eats" sceneMemberID="viewController">
+                <viewController title="Campus selection" id="SZZ-1C-Tgj" customClass="SecondView" customModule="Rutgers_Eats" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3OL-bo-lE7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select your Campus" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8AU-pv-SiI">
-                                <rect key="frame" x="130" y="20" width="154" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="8AU-pv-SiI" secondAttribute="height" multiplier="22:3" id="HFz-2D-Ayb"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nxq-KS-3GH">
-                                <rect key="frame" x="20" y="118" width="374" height="37"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="Nxq-KS-3GH" secondAttribute="height" multiplier="374:37" id="9y8-Jp-2CM"/>
-                                    <constraint firstAttribute="width" constant="375" id="DDy-BY-6Cu"/>
-                                    <constraint firstAttribute="height" constant="37" id="gyo-VM-4Ih"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="College Ave">
-                                    <color key="baseForegroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                </buttonConfiguration>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GP0-R7-IXL">
-                                <rect key="frame" x="20" y="175" width="375" height="37"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="375" id="QwC-6R-z9z"/>
-                                    <constraint firstAttribute="width" secondItem="GP0-R7-IXL" secondAttribute="height" multiplier="374:37" id="d3V-hi-ZfA"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Busch">
-                                    <color key="baseForegroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                </buttonConfiguration>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ua0-74-ZgK">
-                                <rect key="frame" x="20" y="232" width="375" height="37.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="Ua0-74-ZgK" secondAttribute="height" multiplier="374:37" id="BZo-YR-tT7"/>
-                                    <constraint firstAttribute="width" constant="375" id="b8F-xs-Wk7"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Cook and Douglas">
-                                    <color key="baseForegroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                </buttonConfiguration>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1zW-5L-ezF">
                                 <rect key="frame" x="20" y="61" width="375" height="37"/>
                                 <constraints>
@@ -112,7 +109,65 @@
                                 <buttonConfiguration key="configuration" style="gray" title="Livingston">
                                     <color key="baseForegroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="H3L-0k-f6b" kind="show" id="6Iu-aE-4JP"/>
+                                </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nxq-KS-3GH">
+                                <rect key="frame" x="20" y="118" width="364" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Nxq-KS-3GH" secondAttribute="height" multiplier="374:37" id="9y8-Jp-2CM"/>
+                                    <constraint firstAttribute="width" constant="375" id="DDy-BY-6Cu"/>
+                                    <constraint firstAttribute="height" constant="37" id="gyo-VM-4Ih"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="College Ave">
+                                    <color key="baseForegroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="fmi-4b-0K7" kind="show" id="Wa0-EL-7VE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GP0-R7-IXL">
+                                <rect key="frame" x="20" y="175" width="365" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="QwC-6R-z9z"/>
+                                    <constraint firstAttribute="width" secondItem="GP0-R7-IXL" secondAttribute="height" multiplier="374:37" id="d3V-hi-ZfA"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Busch">
+                                    <color key="baseForegroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="8Ht-jr-M2d" kind="show" id="sHQ-53-5J8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ua0-74-ZgK">
+                                <rect key="frame" x="20" y="231" width="365" height="36.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Ua0-74-ZgK" secondAttribute="height" multiplier="374:37" id="BZo-YR-tT7"/>
+                                    <constraint firstAttribute="width" constant="375" id="b8F-xs-Wk7"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Cook and Douglass">
+                                    <color key="baseForegroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="qvO-Xl-6EV" kind="show" id="J9y-2q-KBI"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select your Campus" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q0c-jP-0bI">
+                                <rect key="frame" x="125" y="20" width="154" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="154" id="Gtn-Do-ySh"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="154" id="J47-8h-F3r"/>
+                                    <constraint firstAttribute="width" secondItem="q0c-jP-0bI" secondAttribute="height" multiplier="22:3" id="KF9-Sq-s5n"/>
+                                    <constraint firstAttribute="width" secondItem="q0c-jP-0bI" secondAttribute="height" multiplier="22:3" id="MJm-oz-GuQ"/>
+                                    <constraint firstAttribute="height" constant="21" id="wGM-kT-lLB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jcW-5U-vHt"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -121,32 +176,35 @@
                             <constraint firstItem="Nxq-KS-3GH" firstAttribute="leading" secondItem="jcW-5U-vHt" secondAttribute="leading" constant="20" id="1eP-L4-xxh"/>
                             <constraint firstItem="Nxq-KS-3GH" firstAttribute="top" secondItem="1zW-5L-ezF" secondAttribute="bottom" constant="20" id="30v-CB-8gk"/>
                             <constraint firstItem="Ua0-74-ZgK" firstAttribute="leading" secondItem="jcW-5U-vHt" secondAttribute="leading" constant="20" id="4Bq-Oi-U4R"/>
-                            <constraint firstItem="1zW-5L-ezF" firstAttribute="top" secondItem="8AU-pv-SiI" secondAttribute="bottom" constant="61" id="5ep-LF-pnL"/>
                             <constraint firstItem="jcW-5U-vHt" firstAttribute="trailing" secondItem="Nxq-KS-3GH" secondAttribute="trailing" constant="19.800000000000001" id="6B7-6g-7MF"/>
                             <constraint firstAttribute="trailing" secondItem="1zW-5L-ezF" secondAttribute="trailing" constant="19" id="6tG-01-Ckr"/>
                             <constraint firstItem="GP0-R7-IXL" firstAttribute="top" secondItem="Nxq-KS-3GH" secondAttribute="bottom" constant="20" id="7dn-pZ-IDI"/>
                             <constraint firstItem="1zW-5L-ezF" firstAttribute="leading" secondItem="jcW-5U-vHt" secondAttribute="leading" constant="20" id="C4k-B6-Xso"/>
                             <constraint firstItem="jcW-5U-vHt" firstAttribute="trailing" secondItem="Ua0-74-ZgK" secondAttribute="trailing" constant="19" id="CTx-H4-qjY"/>
                             <constraint firstItem="GP0-R7-IXL" firstAttribute="top" secondItem="Nxq-KS-3GH" secondAttribute="bottom" constant="20" id="CpR-Oh-NkQ"/>
-                            <constraint firstItem="1zW-5L-ezF" firstAttribute="top" secondItem="8AU-pv-SiI" secondAttribute="bottom" constant="61" id="D3b-yy-glQ"/>
-                            <constraint firstItem="8AU-pv-SiI" firstAttribute="centerX" secondItem="3OL-bo-lE7" secondAttribute="centerX" id="FNh-Zu-LrT"/>
                             <constraint firstItem="Nxq-KS-3GH" firstAttribute="trailing" secondItem="3OL-bo-lE7" secondAttribute="trailingMargin" constant="19" id="G0n-gS-kIM"/>
+                            <constraint firstItem="q0c-jP-0bI" firstAttribute="top" secondItem="jcW-5U-vHt" secondAttribute="top" constant="20" id="GHi-EF-Fd0"/>
                             <constraint firstItem="Nxq-KS-3GH" firstAttribute="width" secondItem="Nxq-KS-3GH" secondAttribute="height" multiplier="374:37" id="KiS-ps-Lhh"/>
-                            <constraint firstItem="1zW-5L-ezF" firstAttribute="top" secondItem="8AU-pv-SiI" secondAttribute="bottom" constant="61" id="Oc4-kA-dMJ"/>
+                            <constraint firstItem="jcW-5U-vHt" firstAttribute="trailing" secondItem="q0c-jP-0bI" secondAttribute="trailing" constant="130" id="Q1j-wc-rpv"/>
+                            <constraint firstItem="q0c-jP-0bI" firstAttribute="centerX" secondItem="3OL-bo-lE7" secondAttribute="centerX" id="ScB-G0-ym6"/>
+                            <constraint firstItem="q0c-jP-0bI" firstAttribute="width" secondItem="q0c-jP-0bI" secondAttribute="height" multiplier="22:3" id="Sq9-Yz-pBy"/>
+                            <constraint firstItem="q0c-jP-0bI" firstAttribute="leading" secondItem="jcW-5U-vHt" secondAttribute="leading" constant="130" id="TBe-2T-YBO"/>
                             <constraint firstItem="GP0-R7-IXL" firstAttribute="leading" secondItem="jcW-5U-vHt" secondAttribute="leading" constant="20" id="Ub2-o4-pUV"/>
                             <constraint firstItem="Ua0-74-ZgK" firstAttribute="top" secondItem="GP0-R7-IXL" secondAttribute="bottom" constant="20" id="WuL-Rl-xlK"/>
                             <constraint firstItem="1zW-5L-ezF" firstAttribute="top" secondItem="jcW-5U-vHt" secondAttribute="top" constant="61" id="YE5-eJ-8Mx"/>
                             <constraint firstItem="1zW-5L-ezF" firstAttribute="top" secondItem="jcW-5U-vHt" secondAttribute="top" constant="61" id="aTg-2i-4s1"/>
                             <constraint firstItem="Ua0-74-ZgK" firstAttribute="width" secondItem="Ua0-74-ZgK" secondAttribute="height" multiplier="374:37" id="aYZ-O4-WFs"/>
                             <constraint firstItem="jcW-5U-vHt" firstAttribute="trailing" secondItem="GP0-R7-IXL" secondAttribute="trailing" constant="19" id="au7-l5-fk6"/>
+                            <constraint firstItem="q0c-jP-0bI" firstAttribute="leading" secondItem="jcW-5U-vHt" secondAttribute="leading" constant="125" id="dNe-tn-pn0"/>
                             <constraint firstItem="Ua0-74-ZgK" firstAttribute="top" secondItem="GP0-R7-IXL" secondAttribute="bottom" constant="20" id="fn7-GJ-UGX"/>
                             <constraint firstItem="GP0-R7-IXL" firstAttribute="leading" secondItem="jcW-5U-vHt" secondAttribute="leading" constant="20" id="gUE-8Z-9uW"/>
                             <constraint firstItem="Ua0-74-ZgK" firstAttribute="leading" secondItem="jcW-5U-vHt" secondAttribute="leading" constant="20" id="ghU-T0-mLb"/>
-                            <constraint firstItem="8AU-pv-SiI" firstAttribute="top" secondItem="jcW-5U-vHt" secondAttribute="top" constant="20" id="ivY-Fz-15p"/>
+                            <constraint firstItem="jcW-5U-vHt" firstAttribute="trailing" secondItem="q0c-jP-0bI" secondAttribute="trailing" constant="125" id="hAj-jh-dP0"/>
                             <constraint firstItem="1zW-5L-ezF" firstAttribute="centerX" secondItem="3OL-bo-lE7" secondAttribute="centerX" id="j86-Kf-ucD"/>
                             <constraint firstItem="Nxq-KS-3GH" firstAttribute="top" secondItem="1zW-5L-ezF" secondAttribute="bottom" constant="20" id="nMw-Vz-zs5"/>
                             <constraint firstItem="Nxq-KS-3GH" firstAttribute="leading" secondItem="jcW-5U-vHt" secondAttribute="leading" constant="19.5" id="qoI-EY-ki6"/>
                             <constraint firstItem="Nxq-KS-3GH" firstAttribute="leading" secondItem="jcW-5U-vHt" secondAttribute="leading" constant="20" id="tRb-Nc-i1E"/>
+                            <constraint firstItem="q0c-jP-0bI" firstAttribute="centerX" secondItem="3OL-bo-lE7" secondAttribute="centerX" id="u6n-CK-hGp"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Rutgers Eats" id="oKq-ea-IUC">
@@ -156,7 +214,79 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aIM-hs-Jzn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1444.9275362318842" y="97.767857142857139"/>
+            <point key="canvasLocation" x="1483" y="98"/>
+        </scene>
+        <!--Livi-->
+        <scene sceneID="IVa-tr-28i">
+            <objects>
+                <viewController title="Livi" id="H3L-0k-f6b" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5hS-pb-cXh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Wce-zA-UMR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Rutgers Eats" id="8Fv-Em-IBc">
+                        <barButtonItem key="backBarButtonItem" title="back" id="cce-o3-Nmv"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Pa-IX-Sgx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="516" y="-719"/>
+        </scene>
+        <!--College ave-->
+        <scene sceneID="0N1-cW-eYY">
+            <objects>
+                <viewController title="College ave" id="fmi-4b-0K7" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="M0w-jE-lDy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="jXl-mU-Tc6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Rutgers Eats" id="fS9-G3-Wtc">
+                        <barButtonItem key="backBarButtonItem" title="back" id="a1s-Cj-hDU"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kWc-x3-tIb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2516" y="-719"/>
+        </scene>
+        <!--Busch-->
+        <scene sceneID="ymE-0v-oAJ">
+            <objects>
+                <viewController title="Busch" id="8Ht-jr-M2d" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7WJ-hv-ud0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="TAJ-OX-qvc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Rutgers Eats" id="EE6-0e-e4h">
+                        <barButtonItem key="backBarButtonItem" title="back" id="JyW-DS-VpU"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dl4-q9-FXA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="761" y="968"/>
+        </scene>
+        <!--C and D-->
+        <scene sceneID="Zub-IE-jun">
+            <objects>
+                <viewController title="C and D" id="qvO-Xl-6EV" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="S8Y-m9-eCh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="z7b-R7-hwS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Rutgers Eats" id="CI7-BS-VFh">
+                        <barButtonItem key="backBarButtonItem" title="back" id="Oce-L9-lcM"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vcz-4L-evJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2071" y="953"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kcU-vO-OpD">
@@ -183,6 +313,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mlg-bM-QFP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="34.782608695652179" y="97.767857142857139"/>
+        </scene>
+        <!--Currentloc View-->
+        <scene sceneID="pAf-Uo-Hej">
+            <objects>
+                <viewController id="ZtF-C6-JuO" customClass="CurrentlocView" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sP9-I0-tfp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="rLh-gE-BnK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jUb-Yg-mNb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZNF-Sg-l1u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-210" y="953"/>
         </scene>
     </scenes>
     <color key="tintColor" name="AccentColor"/>
