@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Rutgers/static/css/main.64e535d0.css",
+    "main.js": "/Rutgers/static/js/main.2864b819.js",
+    "index.html": "/Rutgers/index.html",
+    "main.64e535d0.css.map": "/Rutgers/static/css/main.64e535d0.css.map",
+    "main.2864b819.js.map": "/Rutgers/static/js/main.2864b819.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.64e535d0.css",
+    "static/js/main.2864b819.js"
+  ]
+}
