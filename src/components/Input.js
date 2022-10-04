@@ -11,7 +11,7 @@ class Input extends Component {
             this.props.getfunc(lat,long)
             lat = lat.toString()
             long= long.toString()
-            fetch("http://localhost:3050/google/"+lat + "/" + long)
+            fetch("http://127.0.0.1:3050/google/"+lat + "/" + long)
             .then(response => response.json())
             .then(json => this.googleinfo(json))
         }
