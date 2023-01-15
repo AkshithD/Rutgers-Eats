@@ -35,7 +35,7 @@ class RestautantHolder extends Component {
             console.log(lat,long)
             lat = lat.toString()
             long = long.toString()
-            fetch("http://127.0.0.1:3050/" + lat + "/" + long)
+            fetch("https://rutgers-eats-production.up.railway.app/" + lat + "/" + long)
             .then(response => response.json())
             .then(json => this.createdata(json))
         }
