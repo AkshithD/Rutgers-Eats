@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Rutgers-Eats/static/css/main.64e535d0.css",
-    "main.js": "/Rutgers-Eats/static/js/main.6e8b7dea.js",
+    "main.js": "/Rutgers-Eats/static/js/main.5768b959.js",
     "index.html": "/Rutgers-Eats/index.html",
     "main.64e535d0.css.map": "/Rutgers-Eats/static/css/main.64e535d0.css.map",
-    "main.6e8b7dea.js.map": "/Rutgers-Eats/static/js/main.6e8b7dea.js.map"
+    "main.5768b959.js.map": "/Rutgers-Eats/static/js/main.5768b959.js.map"
   },
   "entrypoints": [
     "static/css/main.64e535d0.css",
-    "static/js/main.6e8b7dea.js"
+    "static/js/main.5768b959.js"
   ]
 }
